@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <style>
+    div:hover {
+      background-color: #f0f0f0;
+    }
+    </style>
+</head>
+
+<body>
+  <script src="confetti.js"></script>
+    <script>
+        var flipped = false;
+        function myFunction() {
+            if(!flipped)
+            {
+              document.getElementById("text").style.color = "#3578E5";
+              document.getElementById("image").src = 'bluenickel.png';
+              flipped = true;
+              var button = document.getElementById("mybutton");
+              confetti(button);
+            }
+            else
+            {
+              document.getElementById("text").style.color = "#606770";
+              document.getElementById("image").src = 'nickel.png';
+              flipped = false;
+            }
+        }
+        </script>
+  <div style="padding-top:200px;"></div>
+  <div id="mybutton" onclick="myFunction()" style="cursor: pointer;width: 80px;padding-left: 30px;">
+    <div style="display: inline;"><img id="image"src="nickel.png"> </div>       
+    <div id="text" style="font-size:13px;vertical-align: super;font-family: Helvetica, Arial, sans-serif;color: #606770;font-weight: 600;display: inline;">5c</div style="">
+  </div>
+
+
+</body>
+</html>
